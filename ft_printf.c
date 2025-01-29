@@ -6,11 +6,10 @@
 /*   By: kwrzosek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 12:39:09 by kwrzosek          #+#    #+#             */
-/*   Updated: 2025/01/27 19:01:33 by kwrzosek         ###   ########.fr       */
+/*   Updated: 2025/01/29 20:12:54 by kwrzosek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "ft_printf.h"
 
 int	ft_printf(const char *format, ...)
@@ -28,6 +27,12 @@ int	ft_printf(const char *format, ...)
 			count += write(1, &format, 1);
 		format++;
 	}
-	va_stop(args);
+	va_end(args);
 	return (count);
 }
+
+/*
+int main ()
+{
+
+}*/
