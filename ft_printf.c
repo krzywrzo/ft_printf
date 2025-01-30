@@ -24,7 +24,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 			count += ft_type(*(++format), args);
 		else
-			count += write(1, &format, 1);
+			count += write(1, format, 1);
 		format++;
 	}
 	va_end(args);
@@ -34,5 +34,5 @@ int	ft_printf(const char *format, ...)
 /*
 int main ()
 {
-
+	ft_printf("%c\n", 'x');
 }*/

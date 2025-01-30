@@ -21,9 +21,10 @@
 int	ft_strlen(const char *str);
 int	ft_printf(const char *format, ...);
 int	ft_type(char type, va_list args);
-int	print_char(char c);
+int	print_char(int c);
 int	print_str(char *str);
 int	print_digit(int nb);
 int	print_smol_hex(unsigned int nb);
 int	print_large_hex(unsigned int nb);
+int	print_unsigned_digit(unsigned int nb);
 #endif
