@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kwrzosek <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kwrzosek <kwrzosek@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:23:43 by kwrzosek          #+#    #+#             */
-/*   Updated: 2025/01/29 18:43:24 by kwrzosek         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:05:43 by kwrzosek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <unistd.h>
-# include <stdlib.h>
 # include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 int	ft_strlen(const char *str);
 int	ft_printf(const char *format, ...);
@@ -24,7 +24,7 @@ int	ft_type(char type, va_list args);
 int	print_char(int c);
 int	print_str(char *str);
 int	print_digit(int nb);
-int	print_smol_hex(unsigned int nb);
-int	print_large_hex(unsigned int nb);
+int	print_hex(unsigned int nb, char type);
 int	print_unsigned_digit(unsigned int nb);
+int	print_pointer(unsigned long nb);
 #endif
